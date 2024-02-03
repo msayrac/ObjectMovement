@@ -58,10 +58,51 @@ namespace ObjectMovement
 		{
 			pictureBox1.Left -= 5;
 
-			if (pictureBox1.Left <= 55)
+			if (pictureBox1.Left <= 215)
 			{
 				timer4.Stop();
-				timer1.Start();
+				timer5.Start();
+			}
+		}
+
+		private void timer5_Tick(object sender, EventArgs e)
+		{
+			pictureBox1.Top -= 5;
+			if (pictureBox1.Top <= 125)
+			{
+				timer5.Stop();
+				timer6.Start();
+			}
+		}
+
+		private void timer6_Tick(object sender, EventArgs e)
+		{
+			pictureBox1.Left += 5;
+			if (pictureBox1.Left >= 575)
+			{
+				timer6.Stop();
+				timer7.Start();
+			}
+		}
+
+		private void timer7_Tick(object sender, EventArgs e)
+		{
+			pictureBox1.Top += 5;
+			if (pictureBox1.Top >= 320)
+			{
+				timer7.Stop();
+				timer8.Start();
+			}
+		}
+
+		private void timer8_Tick(object sender, EventArgs e)
+		{
+			pictureBox1.Left -= 5;
+
+			if (pictureBox1.Left <= 380)
+			{
+				timer8.Stop();
+				MessageBox.Show("Concratulation you find the exit :)");
 			}
 		}
 	}
